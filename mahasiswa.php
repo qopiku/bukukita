@@ -7,6 +7,7 @@ if ($_SESSION['status'] !== 'login') {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +19,21 @@ if ($_SESSION['status'] !== 'login') {
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">Bukuku</a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="mahasiswa.php">Mahasiswa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="buku.php">Buku</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">

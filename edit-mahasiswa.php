@@ -14,6 +14,7 @@ $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($result);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +26,21 @@ $row = mysqli_fetch_array($result);
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">Bukuku</a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="mahasiswa.php">Mahasiswa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="buku.php">Buku</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-8 offset-md-2">
