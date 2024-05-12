@@ -28,7 +28,7 @@ $row = mysqli_fetch_array($result);
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.php">Bukuku</a>
+            <a class="navbar-brand" href="index.php">BukuKita</a>
 
             <ul class="navbar-nav">
                 <li class="nav-item">
