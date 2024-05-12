@@ -37,6 +37,9 @@ $row = mysqli_fetch_array($result);
                 <li class="nav-item">
                     <a class="nav-link active" href="buku.php">Buku</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="logout.php">Logout</a>
+                </li>
             </ul>
         </div>
     </nav>
