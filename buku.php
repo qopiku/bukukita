@@ -48,25 +48,25 @@ if ($_SESSION['status'] !== 'login') {
                     <div class="card-body">
                         <a href="tambah-buku.php" class="btn btn-md btn-success mb-3">Tambah Data</a>
 
-                        <?php if ($_GET['pesan'] === 'berhasil') : ?>
+                        <?php if (isset($_GET['pesan']) && $_GET['pesan'] === 'berhasil') : ?>
                             <div class="alert alert-success" role="alert">
                                 Data buku berhasil disimpan.
                             </div>
                         <?php endif ?>
 
-                        <?php if ($_GET['pesan'] === 'berhasil_update') : ?>
+                        <?php if (isset($_GET['pesan']) && $_GET['pesan'] === 'berhasil_update') : ?>
                             <div class="alert alert-success" role="alert">
                                 Data buku berhasil diperbarui.
                             </div>
                         <?php endif ?>
 
-                        <?php if ($_GET['pesan'] === 'berhasil_delete') : ?>
+                        <?php if (isset($_GET['pesan']) && $_GET['pesan'] === 'berhasil_delete') : ?>
                             <div class="alert alert-success" role="alert">
                                 Data buku berhasil dihapus.
                             </div>
                         <?php endif ?>
 
-                        <?php if ($_GET['pesan'] === 'gagal_delete') : ?>
+                        <?php if (isset($_GET['pesan']) && $_GET['pesan'] === 'gagal_delete') : ?>
                             <div class="alert alert-danger" role="alert">
                                 Data buku gagal dihapus.
                             </div>

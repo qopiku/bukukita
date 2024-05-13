@@ -14,19 +14,19 @@
             <div class="col-md-6">
                 <h2 class="mb-4">Masuk</h2>
 
-                <?php if ($_GET['pesan'] === 'gagal') : ?>
+                <?php if (isset($_GET['pesan']) && $_GET['pesan'] === 'gagal') : ?>
                     <div class="alert alert-danger" role="alert">
                         Username atau kata sandi salah.
                     </div>
                 <?php endif ?>
 
-                <?php if ($_GET['pesan'] === 'belum_login') : ?>
+                <?php if (isset($_GET['pesan']) && $_GET['pesan'] === 'belum_login') : ?>
                     <div class="alert alert-danger" role="alert">
                         Anda harus login terlebih dahulu.
                     </div>
                 <?php endif ?>
 
-                <?php if ($_GET['pesan'] === 'logout') : ?>
+                <?php if (isset($_GET['pesan']) && $_GET['pesan'] === 'logout') : ?>
                     <div class="alert alert-success" role="alert">
                         Anda berhasil logout.
                     </div>

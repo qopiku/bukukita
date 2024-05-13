@@ -46,7 +46,7 @@ if ($_SESSION['status'] !== 'login') {
                     </div>
 
                     <div class="card-body">
-                        <?php if ($_GET['pesan'] === 'gagal') : ?>
+                        <?php if (isset($_GET['pesan']) && $_GET['pesan'] === 'gagal') : ?>
                             <div class="alert alert-danger" role="alert">
                                 Data buku gagal disimpan.
                             </div>
