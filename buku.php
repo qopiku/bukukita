@@ -6,6 +6,17 @@ if ($_SESSION['status'] !== 'login') {
     header('Location: login.php?pesan=belum_login');
 }
 
+include 'koneksi.php';
+
+$keyword = '';
+
+if (isset($_GET['q'])) {
+    $keyword = $_GET['q'];
+    $query = mysqli_query($conn, "select * from buku where judul like '%$keyword%'");
+} else {
+    $query = mysqli_query($conn, "select * from buku");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +59,11 @@ if ($_SESSION['status'] !== 'login') {
                     <div class="card-body">
                         <a href="tambah-buku.php" class="btn btn-md btn-success mb-3">Tambah Data</a>
 
+                        <form method="get" class="input-group mb-3">
+                            <input name="q" type="text" class="form-control" placeholder="Cari mahasiswa" value="<?php echo $keyword ?>">
+                            <button class="btn btn-outline-secondary" type="submit">Cari</button>
+                        </form>
+
                         <?php if (isset($_GET['pesan']) && $_GET['pesan'] === 'berhasil') : ?>
                             <div class="alert alert-success" role="alert">
                                 Data buku berhasil disimpan.
@@ -86,9 +102,7 @@ if ($_SESSION['status'] !== 'login') {
 
                             <tbody>
                                 <?php
-                                include 'koneksi.php';
                                 $no = 1;
-                                $query = mysqli_query($conn, "select * from buku");
                                 while ($row = mysqli_fetch_array($query)) :
                                 ?>
                                     <tr>
